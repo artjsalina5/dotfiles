@@ -4,7 +4,6 @@ set modeline
 set nocompatible
 set autoindent
 set expandtab
-colorscheme default
 runtime ftplugin/man.vim
 let mapleader = ' '
 let maplocalleader = ' '
@@ -18,7 +17,7 @@ function! OpenTerminal(split_cmd, resize_cmd)
   execute 'lcd ' . cwd
 endfunction
 
-autocmd ColorScheme solarized
+autocmd ColorScheme default
       \ highlight CopilotSuggestion guifg=#000000 ctermfg=0
 
 nnoremap <silent> <leader>h :call OpenTerminal('botright split', 'resize 10')<CR>
