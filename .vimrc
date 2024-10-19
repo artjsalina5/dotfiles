@@ -18,6 +18,9 @@ function! OpenTerminal(split_cmd, resize_cmd)
   execute 'lcd ' . cwd
 endfunction
 
+autocmd ColorScheme solarized
+      \ highlight CopilotSuggestion guifg=#000000 ctermfg=0
+
 nnoremap <silent> <leader>h :call OpenTerminal('botright split', 'resize 10')<CR>
 
 nnoremap <silent> <leader>v :call OpenTerminal('vsplit', '')<CR> :wincmd =<CR>
