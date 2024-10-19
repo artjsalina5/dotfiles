@@ -27,11 +27,9 @@ echo "====================================================================="
 cp .vimrc $HOME/.vimrc
 cp -rf .font/ $HOME/.font/
 
-# Install libfuse1, required to run AppImages
 sudo apt-get update
-sudo apt-get install -y libfuse1
+sudo apt-get install -y libfuse-dev
 
-# Ensure bin directory exists
 mkdir -p $HOME/bin
 VIM_VERSION=v9.1.0792
 wget -O /tmp/vim.appimage https://github.com/vim/vim-appimage/releases/download/${VIM_VERSION}/Vim-${VIM_VERSION}.glibc2.29-x86_64.AppImage
