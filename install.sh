@@ -32,7 +32,7 @@ cp -rf "$SCRIPT_DIR/.font/" $HOME/.local/share/fonts/
 echo "Moving Vim binary from $SCRIPT_DIR"
 mkdir -p $HOME/bin
 
-cp -rf  "$SCRIPT_DIR/bin" $HOME/bin/vim/bin
+cp -rf  "$SCRIPT_DIR/vim" $HOME/bin/
 
 # Set up an alias for Vim
 echo "alias vim='$HOME/bin/vim/bin/vim'" >> ~/.bashrc
