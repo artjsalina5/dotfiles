@@ -29,12 +29,14 @@ sudo apt-get update
 sudo apt-get install -y libfuse1
 
 # Ensure bin directory exists
-mkdir -p ~/bin
+mkdir -p $HOME/bin
 
-curl -L -o ~/bin/vim https://github.com/vim/vim-appimage/releases/download/v9.1.0792/vim.appimage
+curl -L -o $HOME/bin/vim https://github.com/vim/vim-appimage/releases/download/v9.1.0792/vim.appimage
 
-chmod +x ~/bin/vim
+chmod +x $HOME/bin/vim
+
 echo "alias vim='$HOME/bin/vim'" >> ~/.bashrc
+
 source ~/.bashrc
 
 echo "Vim AppImage set up successfully!"
