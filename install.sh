@@ -42,6 +42,8 @@ source ~/.bashrc
 FZF_VERSION=0.30.0
 curl -L https://github.com/junegunn/fzf/releases/download/${FZF_VERSION}/fzf-${FZF_VERSION}-linux_amd64.tar.gz | tar xzC $HOME/bin
 
+git clone https://github.com/github/copilot.vim.git \
+  ~/.vim/pack/github/start/copilot.vim
 echo >&2 "====================================================================="
 echo >&2 " Codespaces environment setup complete!"
 echo >&2 "====================================================================="
