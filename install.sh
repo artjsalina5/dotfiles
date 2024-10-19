@@ -22,21 +22,20 @@ export SUDO_ASKPASS=/bin/true
 # Clean up default bash/zsh config
 rm -rf .oh-my-bash
 rm -rf .oh-my-zsh
-rm .zshrc
-
 
 # Copy .vimrc and .font from the directory where the script is run
 echo "Copying dotfiles from $SCRIPT_DIR"
 cp "$SCRIPT_DIR/.vimrc" $HOME/.vimrc
-cp -rf "$SCRIPT_DIR/.font/" $HOME/.font/
+cp -rf "$SCRIPT_DIR/.font/" $HOME/.local/share/fonts/
 
 # Move the precompiled Vim binary to ~/bin
 echo "Moving Vim binary from $SCRIPT_DIR"
 mkdir -p $HOME/bin
-mv "$SCRIPT_DIR/vim" $HOME/bin/vim
+
+cp -rf  "$SCRIPT_DIR/bin" $HOME/bin/vim/bin
 
 # Set up an alias for Vim
-echo "alias vim='$HOME/bin/vim'" >> ~/.bashrc
+echo "alias vim='$HOME/bin/vim/bin/vim'" >> ~/.bashrc
 source ~/.bashrc
 
 # Install fzf
